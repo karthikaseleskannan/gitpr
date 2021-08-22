@@ -527,6 +527,7 @@
         content: "{{extract.stdout}}" 
         dest: "output/shoot.yaml"
 # made some chage
+#test 
 
 
 # NOTE: this is not a complete list of all possible keywords in a play or task (TODO: url playbook object and keywords), just an example of very common options.
