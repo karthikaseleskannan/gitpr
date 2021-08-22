@@ -518,6 +518,16 @@
     # the same as a tasks file, see the tasks section above for an example.
     - import_tasks: handlers/site.yml
 
+    - name: execute python script to extract values
+      script: extract.py
+      register: extract
+
+    - name: write python output to a file                                                                              
+      copy:                                                                                              
+        content: "{{extract.stdout}}" 
+        dest: "output/shoot.yaml"
+# made some chage
+
 
 # NOTE: this is not a complete list of all possible keywords in a play or task (TODO: url playbook object and keywords), just an example of very common options.
 
